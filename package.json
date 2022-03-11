@@ -1,0 +1,30 @@
+{
+  "name": "quotes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild lambda/index.js --bundle --platform=node --target=node14 --outfile=lambda/build/index.js --keep-names --minify",
+    "deploy": "cdk deploy",
+    "build-and-deploy": "npm run build && npm run deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "engines": {
+    "node": "14^"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.0"
+  },
+  "devDependencies": {
+    "@aws-cdk/aws-apigateway": "^1.147.0",
+    "@aws-cdk/aws-ec2": "^1.148.0",
+    "@aws-cdk/aws-lambda": "^1.147.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.148.0",
+    "@aws-cdk/core": "^1.147.0",
+    "aws-cdk-lib": "^2.15.0",
+    "esbuild": "^0.14.25",
+    "prettier": "^2.5.1"
+  }
+}
